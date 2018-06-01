@@ -19,7 +19,7 @@ none
 
 ##### Returns
 
-`String` - "<CLIENT_NAME>/v<VERSION>/<OS>"
+`String` - "<CLIENT_NAME>/v\<VERSION>/\<OS>"
 
 ##### Example
 ```js
