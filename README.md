@@ -78,3 +78,21 @@ Report bugs to <https://github.com/makerdao/terra/issues>.
 ```
 
 ***
+
+#### terra_join
+
+***
+
+#### terra_pack
+
+***
+
+#### terra_send
+
+***
+
+#### terra_verify
+
+***
+
+#### terra_bot
