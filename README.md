@@ -84,27 +84,27 @@ Report bugs to <https://github.com/makerdao/terra/issues>.
 Returns an API key to join the oracle network
 
 ##### Parameters
-ETH_ADDRESS `String` - address of oracle to join
-ETH_PASSPHRASE_PATH `String` - absolute path to ethereum passphrase file associated with ADDRESS
+ETH_ADDRESS `String` - address of oracle to join    
+ETH_PASSWORD `String` - absolute path to ethereum passphrase file associated with ETH_ADDRESS    
 
 ##### Implementation
-
-Get Timestamp
+```bash
+Get Timestamp   
 now=$(date +%s)
 hash=$(seth keccak "$now")
 
-Create Signature
+Create Signature    
 sig = $(ethsign msg --from "$ETH_ADDRESS --data "$hash" --passphrase-file "$ETH_PASSWORD")
 key=$(curl -sS -d "address=$ETH_ADDRESS&now=$now&sig=$sig" -X POST "https://dai-service.makerdao.com/token")
 
 echo $key
-
+```
 ##### Returns
 
-Success
+Success   
 `String` - $key
 
-Failure
+Failure    
 `String` - "Something went wrong. Could not get API key."
 
 
