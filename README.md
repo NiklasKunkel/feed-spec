@@ -102,16 +102,16 @@ echo $key
 ##### Returns
 
 Success   
-`String` - $key
+`String` - <API_KEY>
 
 Failure    
 `String` - "Something went wrong. Could not get API key."
 
 
 ##### Example
-```js
+```bash
 // Request
-terra join
+terra join 0xEA674fdDe714fd979de3EdF0F56AA9716B898ec8 /path/to/passphrase/file
 
 // Result
 $key
