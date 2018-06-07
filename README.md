@@ -122,6 +122,25 @@ $key
 
 #### terra_pack
 
+Returns keccak-256 hash of price (wei) and timestamp (seconds)
+
+##### Parameters
+PRICE `String` - price of the asset denominated in wei   
+TIMESTAMP `String` - timestamp denominated in seconds
+
+##### Returns
+
+`String` - <SHA3_HASH>
+
+##### Example
+```bash
+// Request
+terra pack 1200000000000000000 1528410938
+
+// Result
+e070a03f47773b961c60f5370e53dcad9e74ab57b6a90dac2adc50fed4613e0d
+```
+
 ***
 
 #### terra_send
