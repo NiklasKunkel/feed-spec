@@ -19,7 +19,7 @@ none
 
 ##### Returns
 
-`String` - "<CLIENT_NAME>/v\<VERSION>/\<OS>"
+`String` - <CLIENT_NAME>/v\<VERSION>/\<OS>
 
 ##### Example
 ```js
@@ -84,8 +84,8 @@ Report bugs to <https://github.com/makerdao/terra/issues>.
 Returns an API key to join the oracle network
 
 ##### Parameters
-ETH_ADDRESS `String` - address of oracle to join    
-ETH_PASSWORD `String` - absolute path to ethereum passphrase file associated with ETH_ADDRESS    
+`String` ETH_ADDRESS - address of oracle to join    
+`String` ETH_PASSWORD - absolute path to ethereum passphrase file associated with ETH_ADDRESS    
 
 ##### Implementation
 ```bash
@@ -125,8 +125,8 @@ $key
 Returns keccak-256 hash of price (wei) and timestamp (seconds)
 
 ##### Parameters
-PRICE `String` - price of the asset denominated in wei   
-TIMESTAMP `String` - timestamp denominated in seconds
+`String` PRICE - price of the asset denominated in wei   
+`String` TIMESTAMP - timestamp denominated in seconds
 
 ##### Returns
 
@@ -144,6 +144,29 @@ e070a03f47773b961c60f5370e53dcad9e74ab57b6a90dac2adc50fed4613e0d
 ***
 
 #### terra_send
+
+Sends data to the oracle network
+
+##### Parameters
+`String` APIKEY - API key returned by `join`   
+`String` ADDRESS - ethereum address of oracle    
+`String` SIG -     
+`String` PRICE - price of the asset denominated in wei     
+`String` TIMESTAMP - timestamp denominated in seconds    
+`String` PAIR - token pair corresponding to price data    
+
+##### Returns
+
+`String` - "Sent!"
+
+##### Example
+```bash
+// Request
+terra send 1200000000000000000 1528410938
+
+// Result
+Sent!
+```
 
 ***
 
